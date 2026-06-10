@@ -83,13 +83,13 @@ header {
     width: 100%;
 }
 
-.close-sidebar svg path {
+.close_sidebar svg path {
     fill: var(--lightBrown);
     transition: fill 0.3s ease;
     transition: scale 0.2s ease;
 }
 
-.close-sidebar:hover svg path {
+.close_sidebar:hover svg path {
     fill: var(--darkRed);
     scale: 1.1;
 }
@@ -98,42 +98,42 @@ header {
     border-top: 1px solid #BCAD91;
 }
 
-.menu-toggle {
+.menu_toggle {
     display: none;
 }
 
-input#menu-toggle {
+input#menu_toggle {
     display: none !important;
 }
 
-.hamburger-btn {
+.hamburger_btn {
     display: none;
     cursor: pointer;
 }
 
-.hamburger-btn svg path {
+.hamburger_btn svg path {
     fill: var(--lightBrown);
     transition: fill 0.3s ease;
     transition: scale 0.2s ease;
 }
 
-.hamburger-btn:hover svg path {
+.hamburger_btn:hover svg path {
     fill: var(--darkRed);
     scale: 1.1;
 }
 
-.menu-toggle:checked ~ .container_sidebar {
+.menu_toggle:checked ~ .container_sidebar {
     transform: translateX(0);
     transition: transform 0.9s ease;
 }
 
-.menu-toggle:checked ~ .overlay {
+.menu_toggle:checked ~ .overlay {
     /* backdrop-filter: blur(5px); */
     opacity: 0.9;
     pointer-events: auto;
 }
 
-.close-sidebar {
+.close_sidebar {
     cursor: pointer;
     /* margin-left: auto; */
     align-self: flex-end;
@@ -378,7 +378,7 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .hamburger-btn {
+    .hamburger_btn {
         display: block;
     }
 
