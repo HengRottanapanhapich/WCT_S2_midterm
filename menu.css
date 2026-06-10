@@ -306,12 +306,15 @@ a {
     max-width: 100vw;
     padding: 4rem 4rem 4rem 4rem;
     background-color: var(--base);
+    width: 100%;
+    overflow-x: clip;
 }
 
 .matchaFamily_container h1 {
     color: var(--darkGreen);
-    font-size: 3rem;
+    font-size: clamp(2.5rem, 3.12vw, 3rem);
     padding-bottom: 4rem;
+    min-width: 0;
 }
 
 .mitem_container {
@@ -320,6 +323,7 @@ a {
     justify-content: space-evenly;
     flex-wrap: wrap;
     gap: 10rem;
+    width: 100%;
 }
 
 .greenS {
@@ -357,7 +361,7 @@ a {
 
 .houjichaFamily_container h1 {
     color: var(--darkBrown);
-    font-size: 3rem;
+    font-size: clamp(2.5rem, 3.12vw, 3rem);
     padding-bottom: 4rem;
 }
 
@@ -387,7 +391,7 @@ a {
 
 .snackAndDessert_container h1 {
     color: var(--darkRed);
-    font-size: 3rem;
+    font-size: clamp(2.5rem, 3.12vw, 3rem);
     padding-bottom: 4rem;
 }
 
@@ -471,6 +475,131 @@ footer {
 
 html {
     scroll-behavior: smooth;
+}
+
+@media (max-width: 1182px) {
+    .mitem_container {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        justify-content: flex-start;
+        gap: 2rem;
+        padding: 1rem;
+        scroll-snap-type: x mandatory;
+        width: 100%;
+    }
+
+    .greenS {
+        flex-shrink: 0;
+        width: 288px;
+        scroll-snap-align: start;
+    }
+
+    .hitem_container {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        justify-content: flex-start;
+        gap: 2rem;
+        padding: 1rem;
+        scroll-snap-type: x mandatory;
+        width: 100%;
+    }
+
+    .brownS {
+        flex-shrink: 0;
+        width: 288px;
+        scroll-snap-align: start;
+    }
+
+    .sditem_container {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        justify-content: flex-start;
+        gap: 2rem;
+        padding: 1rem;
+        scroll-snap-type: x mandatory;
+        width: 100%;
+    }
+
+    .redS {
+        flex-shrink: 0;
+        width: 288px;
+        scroll-snap-align: start;
+    }
+}
+
+@media (max-width: 440px) {
+    .matchaFamily_container {
+        padding: 4rem 0rem;
+    }
+
+    .mitem_container {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        justify-content: flex-start;
+        gap: 1rem;
+        padding: 0 calc((100% - 288px) / 2);
+        scroll-padding-left: calc((100% - 288px) / 2);
+        scroll-snap-type: x mandatory;
+        width: 100%;
+    }
+
+    .greenS {
+        flex-shrink: 0;
+        width: 288px;
+        height: 398px;
+        scroll-snap-align: start;
+    }
+
+    .houjichaFamily_container {
+        padding: 4rem 0rem;
+    }
+
+    .hitem_container {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        justify-content: flex-start;
+        gap: 1rem;
+        padding: 0 calc((100% - 288px) / 2);
+        scroll-padding-left: calc((100% - 288px) / 2);
+        scroll-snap-type: x mandatory;
+        width: 100%;
+    }
+
+    .brownS {
+        flex-shrink: 0;
+        width: 288px;
+        height: 398px;
+        scroll-snap-align: start;
+    }
+
+    .snackAndDessert_container {
+        padding: 4rem 0rem;
+    }
+
+    .sditem_container {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        justify-content: flex-start;
+        gap: 1rem;
+        padding: 0 calc((100% - 288px) / 2);
+        scroll-padding-left: calc((100% - 288px) / 2);
+        scroll-snap-type: x mandatory;
+        width: 100%;
+    }
+
+    .redS {
+        flex-shrink: 0;
+        width: 288px;
+        height: 398px;
+        scroll-snap-align: start;
+    }
+
+    .items1 {
+        width: 258px;
+        height: 276px;
+        top: 15px;
+        left: 15px;
+    }
 }
 
 @media (max-width: 768px) {
