@@ -259,6 +259,21 @@ button {
 
 .hero_matcha {
     width: clamp(19rem, 25rem, 30rem);
+    /* transform: translateY(20%); */
+    animation-name: slideInFade;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+}
+
+@keyframes slideInFade {
+    0% {
+        transform: translateY(50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
 }
 
 .hero_matcha img {
@@ -270,6 +285,22 @@ button {
     max-width: 27.5rem;
     min-width: 10rem;
     padding-bottom: 6rem;
+    animation-name: slideInFadeText;
+    animation-duration: 0.8s;
+    animation-fill-mode: both;
+    animation-delay: 1.2s;
+    animation-timing-function: ease-in;
+}
+
+@keyframes slideInFadeText {
+    0% {
+        transform: translateY(70%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
 }
 
 .text_container h1 p {
@@ -646,8 +677,6 @@ footer {
         text-align: center;
     }
 }
-
-
 
 html {
     scroll-behavior: smooth;
